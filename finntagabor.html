@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="hu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Rólam</title>
+  <style>
+    :root{--accent:#6c63ff;--bg:#0f1724;--card:#0b1220;--muted:#9aa4b2}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;background:linear-gradient(180deg,#071022 0%, #0b1220 100%);color:#e6eef8;line-height:1.5}
+    header{display:flex;justify-content:space-between;align-items:center;padding:18px 24px;background:rgba(255,255,255,0.02);backdrop-filter:blur(6px)}
+    .brand{display:flex;align-items:center;gap:12px}
+    nav a{color:var(--muted);text-decoration:none;margin-left:14px;font-weight:600}
+    nav a.active{color:var(--accent)}
+    main{max-width:980px;margin:28px auto;padding:22px}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:14px;padding:20px;margin-bottom:18px;box-shadow:0 6px 24px rgba(2,6,23,0.6)}
+    .grid{display:grid;grid-template-columns:1fr 320px;gap:18px}
+    .bio h1{margin:0 0 6px 0;font-size:28px}
+    .bio p{color:var(--muted);margin:0}
+    .contact{padding:12px;border-radius:10px;background:rgba(0,0,0,0.08)}
+    .tag{display:inline-block;padding:6px 10px;border-radius:999px;background:rgba(255,255,255,0.02);margin-right:8px;margin-bottom:8px;font-size:13px}
+    footer{padding:18px;text-align:center;color:var(--muted)}
+
+    /* Hobbik oldal */
+    .hobbies-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}
+    .hobby{padding:14px;border-radius:10px;background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.02));min-height:100px}
+
+    /* responsive */
+    @media (max-width:880px){.grid{grid-template-columns:1fr}nav a{margin-left:10px} .avatar{width:48px;height:48px}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <img src="profil.jpg" alt="Rólam" style="width: 70px;;height: 70px;;border-radius:12px;object-fit:cover;">
+      <div>
+        <div style="font-weight:700">Finta Gébor</div>
+        <div style="font-size:13px;color:var(--muted)">Rólam</div>
+      </div>
+    </div>
+    <nav>
+      <a href="#about" id="nav-about">Rólam</a>
+      <a href="#hobbies" id="nav-hobbies">Hobbik</a>
+      <a href="#contact" id="nav-contact">Kapcsolat</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ABOUT -->
+    <section id="about" class="card bio">
+      <h1>Rólam</h1> 
+      <p style="margin-top:8px"><strong>Finta Gábor</strong>Hello! Finta Gábor vagyok 18 éves és a Mátészalkai MSzC Gépészeti be járok. Informatika szakra járok 4éve és ezt is szeretnem a jövőben majd folytatni ha lesz rá lehetőségem.</p>
+
+      <div style="margin-top:16px">
+        <div class="tag">Szakma: Informatika</div>
+        <div class="tag">Lakhely: Rohod</div>
+        <div class="tag">Nyelv: Magyar</div>
+      </div>
+
+      <div style="margin-top:16px;display:flex;gap:12px;flex-wrap:wrap">
+        <a class="tag" href="#hobbies" onclick="navigateTo('hobbies')">Nézd meg a hobbijaimat!</a>
+        <a class="tag" href="#contact" onclick="navigateTo('contact')">Kapcsolatfelvétel</a>
+      </div>
+    </section>
+
+    <div class="grid">
+
+        <section class="card">
+          <h3>Szakterületek</h3>
+          <p style="color:var(--muted)">HTML • CSS • JavaScript</p>
+        </section>
+      </aside>
+    </div>
+
+    <!-- HOBBIES FULL PAGE (hash route) -->
+    <section id="hobbies" class="card" style="display:none">
+      <h1>Hobbiks</h1>
+
+      <div class="hobbies-list" style="margin-top:12px">
+        <div class="hobby">
+          <h3>Gitározás</h3>
+          <a href="gitar.html">Menj a Gitáros oldalra</a>
+          <p style="color:var(--muted)">Lassan már több mint 1 éve gitározom, és eléggé szeretem először kalsszikus gitáron játszottam kb 1 évig, most van egy fél éve hogy át tértem elektromosra.</p>
+        </div>
+
+        <div class="hobby">
+          <h3>Rajzolás</h3>
+          <a href="rajzolas.html">Rajzolás</a>
+          <p style="color:var(--muted)">Szeretem a kreatív dolgokat és néha szoktam rajzolni is.</p>
+        </div>
+
+        <div class="hobby">
+          <h3>Sportolás</h3>
+          <a href="sport.html">Sportolás</a>
+          <p style="color:var(--muted)">Egész kis korom óta sportolok valamit vagy csinalok valamit ami ki kapcsol.</p>
+        </div>
+      </div>
+
+
+      <aside>
+        <section class="card contact" id="contact">
+          <h3>Kapcsolat</h3>
+          <p style="color:var(--muted)">E-mail: <a href="mailto:you@example.com">gaborka091@gmail.coom</a></p>
+          <p style="color:var(--muted)">Telefonszám: <a>+3630827845</a></p>
+          </a></p>
+        </section>
+
+    </section>
+
+  </main>
+
+  <footer>
+    © <span id="year">2025</span> Finta Gábor 
+  </footer>
+
+  <script>
+    // Egyszerű hash alapú navigáció: #about, #hobbies, #contact
+    function showSection(id){
+      document.querySelectorAll('main > section, main > div.grid + aside, main > .grid').forEach(el=>el.style.display='block');
+      // elrejtjük a sections amelyek külön kezeltek
+      document.getElementById('about').style.display = 'block';
+      document.getElementById('hobbies').style.display = 'none';
+      // Ha hobbikra navigálunk
+      if(id==='hobbies'){
+        document.getElementById('hobbies').style.display = 'block';
+        // elrejthetjük a többi tartalmat, ha szeretnéd:
+        // document.querySelector('.grid').style.display = 'none';
+      }
+      if(id==='contact'){
+        document.getElementById('contact').scrollIntoView({behavior:'smooth'});
+      }
+      // aktív nav
+      document.querySelectorAll('nav a').forEach(a=>a.classList.remove('active'));
+      var navId = 'nav-'+id;
+      var el = document.getElementById(navId);
+      if(el) el.classList.add('active');
+    }
+
+    function navigateTo(id){ location.hash = id; }
+
+    function handleHash(){
+      var hash = location.hash.replace('#','') || 'about';
+      showSection(hash);
+    }
+
+    window.addEventListener('hashchange', handleHash);
+    window.addEventListener('load', function(){ document.getElementById('year').textContent = new Date().getFullYear(); handleHash(); });
+  </script>
+</body>
+</html>
+v

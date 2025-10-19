@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="hu">
+<head><meta charset="utf-8"><title>Sportolás</title><style>
+    :root{--accent:#6c63ff;--bg:#0f1724;--card:#0b1220;--muted:#9aa4b2}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,system-ui;background:linear-gradient(180deg,#071022,#0b1220);color:#e6eef8}
+    header{display:flex;justify-content:space-between;align-items:center;padding:18px 24px;background:rgba(255,255,255,0.02);backdrop-filter:blur(6px)}
+    .brand{display:flex;align-items:center;gap:12px}
+    nav a{color:var(--muted);text-decoration:none;margin-left:14px;font-weight:600}
+    .card{background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));border-radius:14px;padding:20px;margin:18px;box-shadow:0 6px 24px rgba(2,6,23,0.6)}
+
+    @media (max-width:880px){.grid{grid-template-columns:1fr}nav a{margin-left:10px} .avatar{width:48px;height:48px}}
+  </style></head>
+<body>
+  <header>
+    <div class="brand">
+      <img src="profil.jpg" alt="Rólam" style="width: 70px;;height: 70px;;border-radius:12px;object-fit:cover;">
+      <div>
+        <div style="font-weight:700">SPORT BEMUTATÓ</div>
+        <div style="font-size:13px;color:var(--muted)">Futás, edzés és egészséges életmód</div>
+      </div>
+    </div>
+    <nav>
+      <a href="finntagabor.html">Főoldal</a>
+      <a href="#benefits">Előnyök</a>
+      <a href="#tips">Tippek</a>
+    </nav>
+  </header>
+  <main>
+    <section id="intro" class="card">
+      <h1>Miért fontos a sport?</h1>
+      <p>A rendszeres sport javítja az egészséget, növeli az energiaszintet és fejleszti az állóképességet.</p>
+    </section>
+    <section id="benefits" class="card">
+      <h2>Konditermi edzés előnyei</h2>
+      <p>A konditermi edzés számos egészségügyi és esztétikai előnnyel jár:</p>
+      <ul style="color:var(--muted)">
+        <li><strong>Izomerő növelése:</strong> Segít az izmok fejlődésében és erősödésében.</li>
+        <li><strong>Zsírégetés:</strong> A súlyzós edzés fokozza az anyagcserét és elősegíti a fogyást.</li>
+        <li><strong>Jobb testtartás:</strong> Megerősíti a törzsizmokat, csökkenti a hát- és derékfájást.</li>
+        <li><strong>Egészségesebb szív és keringés:</strong> Javítja a vérkeringést és csökkenti a szívbetegségek kockázatát.</li>
+        <li><strong>Mentális egészség:</strong> Csökkenti a stresszt és növeli az önbizalmat.</li>
+      </ul>
+    </section>
+    <section id="tips" class="card">
+      <h2>Kezdő edzésterv</h2>
+      <p>Ez egy heti bontású edzésterv kezdőknek a konditeremben:</p>
+      <ul style="color:var(--muted)">
+        <li><strong>Hétfő:</strong> Mell és tricepsz - 3x12 ismétlés fekvenyomás, tolódzkodás, tárogatás</li>
+        <li><strong>Kedd:</strong> Pihenő / könnyű kardió</li>
+        <li><strong>Szerda:</strong> Hát és bicepsz - 3x12 ismétlés lehúzás, evezés, bicepsz hajlítás</li>
+        <li><strong>Csütörtök:</strong> Pihenő / könnyű kardió</li>
+        <li><strong>Péntek:</strong> Láb és váll - 3x12 guggolás, kitörés, vállból nyomás</li>
+        <li><strong>Szombat:</strong> Kiegészítő gyakorlatok / core - hasizom, törzs stabilitás</li>
+        <li><strong>Vasárnap:</strong> Pihenő</li>
+      </ul>
+      <p style="color:var(--muted)">A súlyokat a saját erőnlétedhez igazítsd, kezdéskor inkább kisebb súlyokkal dolgozz és koncentrálj a helyes technikára.</p>
+    </section>
+
+    <footer>
+    © <span id="year">2025</span> — Sportolás bemutató oldal
+  </footer>
+</main>
+</body>
+</html>
